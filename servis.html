@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ms">
 <head>
@@ -626,3 +627,633 @@
 </style>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Servis Kami</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+  <style>
+    /* Modern Animation Styles */
+    .service-box {
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0,0,0,0.1);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .service-box.active {
+      border: 2px solid #28a745;
+      background: rgba(40, 167, 69, 0.05);
+    }
+    .service-box::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #28a745, #198754);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    .service-box:hover::after,
+    .service-box.active::after {
+      transform: scaleX(1);
+    }
+    
+    .icon-circle {
+      transition: transform 0.5s ease, background-color 0.3s ease;
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #28a745, #198754);
+      border-radius: 50%;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(40, 167, 69, 0.2);
+    }
+    .icon-circle:hover {
+      transform: rotate(360deg);
+      background: linear-gradient(135deg, #198754, #28a745);
+      box-shadow: 0 6px 12px rgba(40, 167, 69, 0.3);
+    }
+    
+    .service-icon-img {
+      transition: transform 0.3s ease, filter 0.3s ease;
+      max-width: 100%;
+      height: auto;
+      filter: brightness(0) invert(1); /* Make icon white */
+    }
+    .service-box:hover .service-icon-img {
+      transform: scale(1.1);
+    }
+    
+    .service-name {
+      transition: color 0.3s ease;
+      font-weight: 500;
+    }
+    .service-box:hover .service-name {
+      color: #28a745;
+    }
+    
+    .detail-box {
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+    .detail-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    
+    .btn-success {
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-success:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+    }
+    .btn-success::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.5s ease;
+    }
+    .btn-success:hover::after {
+      transform: translateX(100%);
+    }
+    
+    .nav-link {
+      position: relative;
+      color: #333;
+      transition: color 0.3s ease;
+      padding: 0.5rem 0;
+    }
+    .nav-link::before,
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      background: linear-gradient(90deg, #28a745, #198754);
+      transition: width 0.3s ease;
+    }
+    .nav-link::before {
+      left: 50%;
+    }
+    .nav-link::after {
+      right: 50%;
+    }
+    .nav-link.active {
+      color: #28a745;
+    }
+    .nav-link.active::before,
+    .nav-link.active::after {
+      width: 50%;
+    }
+    .nav-link:hover {
+      color: #28a745;
+    }
+    .nav-link:hover::before,
+    .nav-link:hover::after {
+      width: 50%;
+    }
+    
+    .social-icon {
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .social-icon:hover {
+      transform: translateY(-3px);
+      color: #28a745 !important;
+    }
+    
+    .footer-link {
+      transition: color 0.3s ease;
+    }
+    .footer-link:hover {
+      color: #28a745 !important;
+    }
+  </style>
+</head>
+<body>
+
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-3">
+    <div class="container">
+      
+      <!-- Logo Image -->
+      <a class="navbar-brand" href="index.html">
+        <img src="images/Logo.svg" alt="Logo" style="height: 35px;" />
+      </a>
+  
+      <!-- Mobile Menu Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navbar Items -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav me-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Utama</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentangkami.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link active" href="servis.html">Servis</a></li>
+          <li class="nav-item"><a class="nav-link" href="hubungin.php">Hubungi Kami</a></li>
+        </ul>
+  
+        <!-- Auth Buttons -->
+        <div class="d-flex gap-2">
+          <a href="login.html" class="btn btn-outline-success">Log Masuk</a>
+          <a href="registerselection.html" class="btn btn-success">Daftar</a>
+        </div>
+      </div>
+  
+    </div>
+  </nav>
+
+<!-- Servis Kami Intro -->
+<section class="py-5 bg-dark text-white">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Left Image -->
+      <div class="col-md-6 mb-4 mb-md-0 animate__animated animate__fadeInLeft">
+        <div class="intro-image">
+          <img src="images/servislanding.png" alt="Servis Banner" class="img-fluid rounded">
+        </div>
+      </div>
+
+      <!-- Right Text -->
+      <div class="col-md-6 animate__animated animate__fadeInRight">
+        <h2 class="fw-bold mb-3">Servis Kami</h2>
+        <p class="lead">
+          Anda dapat menikmati servis kepakaran juruteknik kami yang berpengalaman selama 20 tahun untuk membaiki semua jenama kenderaan dan membaiki kereta untuk semua jenis kereta. Kami mengutamakan kepuasan pelanggan kami dan kami berusaha untuk melebihi jangkaan anda dengan setiap kali anda mengunjungi bengkel kereta kami.
+        </p>
+        <a href="booking_1.php" class="btn btn-success mt-3">Tempah Servis</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Senarai Servis -->
+<section id="senarai-servis" class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Left: Detail -->
+      <div class="col-lg-4 animate__animated animate__fadeInLeft">
+        <div class="detail-box bg-white p-4 h-100 shadow-sm rounded">
+          <h5 id="data-title" class="fw-bold">Perkhidmatan Penyelenggaraan</h5>
+          <p id="data-description" class="mb-2">Daripada penyelenggaraan enjin hingga penjagaan sistem penyejuk, kami memastikan setiap bahagian kereta anda beroperasi dengan lancar.</p>
+          <p id="data-interval" class="mb-2">Setiap 5,000 – 10,000 km atau 3–6 bulan sekali.</p>
+          <h6 id="data-price" class="fw-bold text-success">RM ++++++</h6>
+        </div>
+      </div>
+
+      <!-- Right: Services Grid -->
+      <div class="col-lg-8">
+        <div class="row g-3">
+
+          <!-- Repeat and update these blocks with your own icons and data -->
+          <div class="col-6 col-md-4 animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-box active"
+              data-title="Perkhidmatan Penyelenggaraan"
+              data-description="Daripada penyelenggaraan enjin hingga penjagaan sistem penyejuk, kami memastikan setiap bahagian kereta anda beroperasi dengan lancar."
+              data-interval="Setiap 5,000 – 10,000 km atau 3–6 bulan sekali."
+              data-price="RM 100-1500">
+              <div class="icon-circle">
+                <img src="images/Perkhidmatan Penyelenggaraan.png" class="service-icon-img" alt="icon">
+              </div>
+              <p class="service-name">Perkhidmatan Penyelenggaraan</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-box"
+              data-title="Baiki Enjin"
+              data-description="Servis membaiki enjin untuk semua jenis kenderaan dengan alat ganti berkualiti."
+              data-interval="Apabila kerosakan enjin berlaku atau lampu enjin menyala."
+              data-price="RM 500 – 1500">
+              <div class="icon-circle">
+                <img src="images/Baiki Enjin.png" class="service-icon-img" alt="icon">
+              </div>
+              <p class="service-name">Baiki Enjin</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-box"
+              data-title="Tukar Minyak Enjin"
+              data-description="Menukar minyak enjin untuk prestasi dan ketahanan enjin."
+              data-interval="Setiap 5,000 – 8,000 km atau 6 bulan."
+              data-price="RM 120 – 250">
+              <div class="icon-circle">
+                <img src="images/Tukar Minyak Enjin.png" class="service-icon-img" alt="icon">
+              </div>
+              <p class="service-name">Tukar Minyak Enjin</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-box"
+              data-title="Bateri"
+              data-description="Penggantian bateri dengan jenama tahan lama dan servis pantas."
+              data-interval="Setiap 2 tahun atau apabila diperlukan."
+              data-price="RM 200 – 350">
+              <div class="icon-circle">
+                <img src="images/Bateri.png" class="service-icon-img" alt="icon">
+              </div>
+              <p class="service-name">Bateri</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-box"
+              data-title="Penggantian Suspension"
+              data-description="Menukar absorber dan spring untuk keselesaan dan kestabilan."
+              data-interval="Apabila bunyi pelik atau hentakan terasa."
+              data-price="RM 600 – 1200">
+              <div class="icon-circle">
+                <img src="images/suspension 1.png" class="service-icon-img" alt="icon">
+              </div>
+              <p class="service-name">Penggantian Suspension</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-box"
+              data-title="Perkhidmatan Aircond"
+              data-description="Servis cuci coil, tambah gas, dan semak kebocoran."
+              data-interval="Setiap tahun atau apabila aircond kurang sejuk."
+              data-price="RM 100 – 300">
+              <div class="icon-circle">
+                <img src="images/Aircond.png" class="service-icon-img" alt="icon">
+              </div>
+              <p class="service-name">Perkhidmatan Aircond</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="hubungi" class="bg-dark text-white pt-5">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Left: Heading & Icons -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <div class="footer-content">
+          <h3 class="fw-bold mb-4">Hubungi kami untuk<br>servis anda.</h3>
+          <div class="social-icons d-flex gap-3">
+            <a href="#" class="social-icon">
+            <img src="images/twitter.png" alt="Twitter" class="social-icon-img">
+            </a>
+            <a href="#" class="social-icon">
+            <img src="images/instagram.png" alt="Instagram" class="social-icon-img">
+            </a>
+            <a href="#" class="social-icon">
+            <img src="images/linkedin.png" alt="Linkedin" class="social-icon-img">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Contact Details -->
+      <div class="col-md-6">
+        <div class="contact-details">
+          <h6 class="fw-bold mb-3">Hubungi Kami</h6>
+          <div class="contact-item mb-3">
+          <img src="images/phone.png" alt="Phone" class="contact-icon">
+            <span class="fw-bold">017-7024127</span>
+          </div>
+          <div class="contact-item mb-3">
+          <img src="images/gps.png" alt="Location" class="contact-icon">
+            <span class="fw-bold">Servis-X, Malaysia</span><br />
+          </div>
+          <div class="contact-item">
+          <img src="images/time.png" alt="Clock" class="contact-icon">
+            <span class="fw-bold">8:00 Pagi - 5:00 Petang</span><br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom bg-black mt-5 py-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4 mb-3 mb-md-0">
+          <a href="index.html" class="brand-logo">
+            <span class="fw-bold">SERVIS-X</span>
+          </a>
+        </div>
+        <div class="col-md-4 mb-3 mb-md-0">
+          <ul class="footer-links list-inline mb-0 text-center">
+            <li class="list-inline-item"><a href="index.html" class="text-white text-decoration-none">Utama</a></li>
+            <li class="list-inline-item"><a href="tentangkami.html" class="text-white text-decoration-none">Tentang Kami</a></li>
+            <li class="list-inline-item"><a href="servis.html" class="text-white text-decoration-none">Servis</a></li>
+            <li class="list-inline-item"><a href="hubungin.php" class="text-white text-decoration-none">Hubungi Kami</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <div class="copyright">&copy; SERVIS-X 2025</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+
+  // Service box click handler
+  document.querySelectorAll('.service-box').forEach(box => {
+    box.addEventListener('click', function() {
+      // Remove active class from all boxes
+      document.querySelectorAll('.service-box').forEach(b => b.classList.remove('active'));
+      // Add active class to clicked box
+      this.classList.add('active');
+      
+      // Update detail box
+      document.getElementById('data-title').textContent = this.dataset.title;
+      document.getElementById('data-description').textContent = this.dataset.description;
+      document.getElementById('data-interval').textContent = this.dataset.interval;
+      document.getElementById('data-price').textContent = this.dataset.price;
+    });
+  });
+</script>
+<style>
+  /* Footer Styles */
+  footer {
+    background: linear-gradient(180deg, #1a1a1a 0%, #000000 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(26, 188, 156, 0.5), transparent);
+  }
+
+  .footer-content h3 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    background: linear-gradient(45deg, #ffffff, #e0e0e0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+  }
+
+  .footer-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #1abc9c, transparent);
+    border-radius: 2px;
+  }
+
+  .social-icons {
+    margin-top: 2rem;
+  }
+
+  .social-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: white;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .social-icon-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    filter: brightness(1) invert(0);
+  }
+
+  .social-icon:hover .social-icon-img {
+    transform: scale(1.2);
+    filter: brightness(1) invert(0);
+  }
+
+  .contact-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    filter: brightness(0) invert(1);
+  }
+
+  .contact-item:hover .contact-icon {
+    transform: scale(1.1);
+  }
+
+  .contact-details {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    
+  }
+
+  .contact-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(5px);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+  }
+
+  .footer-bottom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(26, 188, 156, 0.3), transparent);
+  }
+
+  .brand-logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+  }
+
+  .brand-logo::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #1abc9c, #16a085);
+    transition: width 0.3s ease;
+  }
+
+  .brand-logo:hover::after {
+    width: 100%;
+  }
+
+  .footer-links a {
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+
+  .footer-links a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(45deg, #1abc9c, #16a085);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .footer-links a:hover::before {
+    width: 80%;
+  }
+
+  .copyright {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .footer-content h3 {
+      font-size: 1.8rem;
+    }
+
+    .social-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .contact-details {
+      padding: 1.5rem;
+    }
+
+    .footer-links {
+      margin: 1rem 0;
+    }
+
+    .footer-links a {
+      padding: 0.5rem;
+      font-size: 0.9rem;
+    }
+  }
+</style>
+</body>
+</html>
+>>>>>>> e4a824728d4fe1de902abaa2650ec4192d8f606a

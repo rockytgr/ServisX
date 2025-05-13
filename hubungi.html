@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ms">
 <head>
@@ -138,3 +139,145 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hubungi Pakar - SERVIS-X</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-3">
+    <div class="container">
+      
+      <!-- Logo Image -->
+      <a class="navbar-brand" href="index.html">
+        <img src="images/Logo.svg" alt="Logo" style="height: 35px;" />
+      </a>
+  
+      <!-- Mobile Menu Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navbar Items -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav me-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Utama</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentangkami.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="servis.html">Servis</a></li>
+          <li class="nav-item"><a class="nav-link" href="hubungi.html">Hubungi Kami</a></li>
+        </ul>
+  
+        <!-- Auth Buttons -->
+        <div class="d-flex gap-2">
+          <a href="login.html" class="btn btn-outline-success">Log Masuk</a>
+          <a href="registerselection.html" class="btn btn-success">Daftar</a>
+        </div>
+      </div>
+  
+    </div>
+  </nav>
+
+<!-- Hubungi Pakar Section -->
+<section class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3 class="fw-bold mb-4" style="font-size: 36px;">Hubungi pakar kami</h3>
+          <form action="#" method="POST">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nama Penuh</label>
+              <input type="text" class="form-control" id="name" placeholder="Masukkan nama penuh" required>
+            </div>
+            <div class="mb-3">
+              <label for="workshop" class="form-label">Pilih bengkel</label>
+              <select class="form-select" id="workshop" required>
+                <option value="">Pilih bengkel</option>
+                <option value="Bengkel 1">Bengkel 1</option>
+                <option value="Bengkel 2">Bengkel 2</option>
+                <option value="Bengkel 3">Bengkel 3</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Emel</label>
+              <input type="email" class="form-control" id="email" placeholder="Masukkan emel" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Mesej</label>
+              <textarea class="form-control" id="message" rows="3" placeholder="Masukkan mesej" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success w-100 py-2">Hantar mesej</button>
+          </form>
+        </div>
+  
+        <!-- Contact Details Section -->
+        <div class="col-md-6 text-center text-md-start">
+          <h5>Alamat</h5>
+          <p>-</p>
+          <h5>Contact Details</h5>
+          <p>017-7024127</p>
+          <p>Servis-X@gmail.com</p>
+          <h5>Waktu Operasi</h5>
+          <p>-</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer -->
+<footer id="hubungi" class="bg-dark text-white pt-5">
+    <div class="container">
+      <div class="row">
+        
+        <!-- Left: Heading & Icons -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h3 class="fw-bold">Hubungi kami untuk<br>servis anda.</h3>
+          <div class="d-flex gap-3 mt-3 fs-5">
+            <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+  
+        <!-- Right: Contact Details -->
+        <div class="col-md-6">
+          <h6 class="text-muted">Hubungi Kami</h6>
+          <p class="fw-bold">017-7024127</p>
+          <p class="mb-1"><span class="text-muted">Alamat</span><br />-</p>
+          <p class="mb-0"><span class="text-muted">Waktu Operasi</span><br />-</p>
+        </div>
+  
+      </div>
+    </div>
+  
+    <!-- Bottom Nav Style Footer -->
+    <div class="bg-black mt-5 py-3">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div class="mb-2 mb-md-0">
+          <a href="index.html" class="btn btn-outline-light btn-sm fw-bold px-3 py-1">SERVIS-X</a>
+        </div>
+        <ul class="list-inline mb-2 mb-md-0">
+          <li class="list-inline-item"><a href="index.html" class="text-white text-decoration-none">Utama</a></li>
+          <li class="list-inline-item"><a href="tentangkami.html" class="text-white text-decoration-none">Tentang Kami</a></li>
+          <li class="list-inline-item"><a href="servis.html" class="text-white text-decoration-none">Servis</a></li>
+          <li class="list-inline-item"><a href="hubungi.html" class="text-white text-decoration-none">Hubungi Kami</a></li>
+        </ul>
+        <div class="text-white">&copy; SERVIS-X 2025</div>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script src="scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+>>>>>>> e4a824728d4fe1de902abaa2650ec4192d8f606a
