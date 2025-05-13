@@ -1,0 +1,281 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Service Section */
+  .service-box {
+    height: 140px;
+    background-color: #fff;
+    border: 1px solid black; /* ✅ Black border */
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .service-box:hover {
+    background-color: #198754; /* ✅ Green on hover */
+    color: #fff;
+  }
+
+  .g_id_signin {
+    width: 498px !important;
+    height: 40px !important;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  
+  .service-icon-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    transition: filter 0.3s ease;
+  }
+  
+  .service-box:hover .service-icon-img {
+    filter: brightness(0) invert(1); /* ✅ Make PNG icon white */
+  }
+  
+  .service-name {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+  }
+
+  .step-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #198754;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+    position: relative;
+  }
+  
+  .timeline-step:not(:last-child) .step-circle::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 40px;
+    background: #d1d5db;
+    border-left: 2px dotted #198754;
+  }
+
+  .icon-circle {
+    width: 70px;
+    height: 70px;
+    background-color: #198754;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .circle-icon-img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Makes PNG white */
+  }
+
+  .servis-bar {
+    background-color: #66bb99; /* Match screenshot's green */
+    padding: 12px 0;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  footer h3 {
+    font-size: 1.8rem;
+    line-height: 1.5;
+  }
+  
+  footer i {
+    font-size: 1.25rem;
+  }
+  .service-box.active {
+    background-color: #198754;
+    color: white;
+  }
+  
+  .service-box.active .service-icon-img {
+    filter: brightness(0) invert(1);
+  }
+
+  /* Login Page Styles */
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  h1, h3 {
+    font-weight: bold;
+  }
+  
+  .login-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-box input {
+    font-size: 16px;
+  }
+  
+  .login-box button {
+    font-size: 16px;
+  }
+  
+  hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Login button */
+  .login-box .btn-dark {
+    background-color: #343a40;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 12px 0;
+  }
+  
+  .login-box .btn-dark:hover {
+    background-color: #23272b;
+  }
+  
+  /* Google button */
+  .login-box .btn-outline-danger {
+    background-color: #4285f4;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 12px 0;
+  }
+  
+  .login-box .btn-outline-danger:hover {
+    background-color: #357ae8;
+    border-color: #357ae8;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #222222;
+    color: white;
+    padding: 40px 0;
+  }
+  
+  footer a {
+    color: white;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Custom Styles for Logo on the Left */
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+  
+ 
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  h3 {
+    font-weight: bold;
+    font-size: 36px;
+  }
+  
+  /* Form Styling */
+  section.py-4 .form-label {
+    font-weight: bold;
+  }
+  
+  section.py-4 .form-control {
+    border-radius: 10px;
+  }
+  
+  section.py-4 .form-select {
+    border-radius: 10px;
+  }
+  
+  section.py-4 button {
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 12px 0;
+  }
+  
+  section.py-4 button:hover {
+    background-color: #218838;
+  }
+  
+  /* Footer Styling */
+  footer {
+    background-color: #222222;
+    color: white;
+    padding: 40px 0;
+  }
+  
+  footer a {
+    color: white;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Contact Details Styling */
+  section.py-4 h5 {
+    font-weight: bold;
+  }
+  
+  section.py-4 .text-center {
+    text-align: center;
+  }
+  
+  section.py-4 .text-md-start {
+    text-align: left;
+  }
+  .profile-pic {
+    width: 120px;               /* Set the size of the circle */
+    height: 120px;
+    border-radius: 50%;         /* Circular shape */
+    object-fit: cover;          /* Ensures the image covers the circle */
+    border: 5px solid #fff;     /* White border around the circle */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow around the circle */
+}
+
+.default-profile {
+    background-color: #ccc;     /* Default gray background when no photo is uploaded */
+}
+
+.profile-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
